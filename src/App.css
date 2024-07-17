@@ -1,10 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
+
+
+
 #root {
-  
+  font-family: "Archivo", sans-serif;
   
 }
 
@@ -29,4 +34,8 @@
 
 .modal-header-text-color {
   color: rgba(51, 65, 85, var(--tw-text-opacity));
+}
+
+.hero-bg {
+  background: url("./assets/home-image.jpeg");
 }

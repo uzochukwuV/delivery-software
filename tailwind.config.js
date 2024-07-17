@@ -5,7 +5,15 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      content:{
+        'road':"url('assets/roadmap.png')"
+
+      },
+      backgroundImage:{
+        'uproad': "url('assets/uproad.png')"
+      }
+    },
   },
   plugins: [],
 }
