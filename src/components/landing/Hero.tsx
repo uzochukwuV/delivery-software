@@ -1,7 +1,4 @@
-import React from "react";
-import heroImage from "../../assets/home-image.jpeg";
 
-import CancelIcon from "../misc/CancelIcon";
 import ListItem from "../misc/ListItem";
 import { Card, CardSection, } from "@mantine/core";
 import TrackOrder from "../misc/TrackOrder";

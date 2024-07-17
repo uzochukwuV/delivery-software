@@ -1,4 +1,4 @@
-import React from "react";
+
 import Road1 from "../assets/road1";
 
 function Roadmap() {
