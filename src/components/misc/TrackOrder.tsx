@@ -1,5 +1,5 @@
-import { Button, Divider, SegmentedControl, TextInput } from "@mantine/core";
-import React from "react";
+import { Button, Divider,  TextInput } from "@mantine/core";
+
 
 function TrackOrder() {
   return (
