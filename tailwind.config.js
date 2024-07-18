@@ -11,7 +11,8 @@ export default {
 
       },
       backgroundImage:{
-        'uproad': "url('assets/uproad.png')"
+        'uproad': "url('assets/uproad.png')",
+        'serviceone': "url('assets/serviceone.png')"
       }
     },
   },

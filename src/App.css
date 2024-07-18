@@ -39,3 +39,7 @@
 .hero-bg {
   background: url("./assets/home-image.jpeg");
 }
+
+#service {
+  background: rgba(224, 227, 235, .32);
+}
