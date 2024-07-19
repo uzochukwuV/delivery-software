@@ -1,5 +1,5 @@
 import { Button } from "@mantine/core";
-import React from "react";
+
 
 function Service() {
   return (

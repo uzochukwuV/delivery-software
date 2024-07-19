@@ -1,10 +1,7 @@
 
 import menu from "../../assets/menu.png";
 import { useDisclosure } from "@mantine/hooks";
-import { Modal, ModalContent } from "@mantine/core";
-import CancelIcon from "../../components/misc/CancelIcon";
 
-import { createPortal } from "react-dom";
 function Navbar() {
   const [opened, { open, close }] = useDisclosure(false);
   

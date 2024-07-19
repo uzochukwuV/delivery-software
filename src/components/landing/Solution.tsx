@@ -1,5 +1,5 @@
-import { ActionIcon, NavLink } from "@mantine/core";
-import React from "react";
+
+
 import aspk from "../../assets/solution1.png"
 
 function Solution() {
