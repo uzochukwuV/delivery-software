@@ -21,7 +21,7 @@ function Navbar() {
         </div>
         <div className="menu flex items-center">
         
-         nb 
+        
 
       
         

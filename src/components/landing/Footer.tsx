@@ -2,8 +2,8 @@ import React from "react";
 
 function Footer() {
   return (
-    <div>
-      <div className=" h-[150px] px-6 border-b flex flex-col justify-center gap-4">
+    <div className=" max-w-[1400px] md:py-16 mx-auto">
+      <div className=" h-[150px] px-6 md:px-0 border-b flex flex-col justify-center gap-4">
         <h2>Logo</h2>
        <div>
        <div className="text-[9px] font-semibold logo-bottom mb-2">
@@ -15,7 +15,7 @@ function Footer() {
        </div>
 
       </div>
-      <div  className="copyright px-6 py-6 border-t"><div  className="text-black font-bold text-sm mb-1 leading-tight">
+      <div  className="copyright px-6 md:px-0 py-6 border-t"><div  className="text-black font-bold text-sm mb-1 leading-tight">
           Information Security Policy
         </div> 
         <div  className="text-sm leading-relaxed">

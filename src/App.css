@@ -40,6 +40,17 @@
   background: url("./assets/home-image.jpeg");
 }
 
+@media screen and (min-width: 760px) {
+  .hero-bg {
+    background: url("./assets/home-large.webp");
+  }
+}
+
 #service {
   background: rgba(224, 227, 235, .32);
+}
+
+[data-active="true"]{
+  background-color: #101218;
+  color: white !important ;
 }
