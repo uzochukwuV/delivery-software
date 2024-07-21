@@ -54,3 +54,40 @@
   background-color: #101218;
   color: white !important ;
 }
+
+
+.slideUp, [data-modal="true"] {
+  animation: slideUp 1.3s  ease forwards ;
+}
+
+.slidedown, [data-modal="false"] {
+  animation: slideDown 1.3s  ease forwards;
+}
+
+.modal-wrapper[data-modal="false"]{
+  background: transparent !important;
+  /* opacity: 0; */
+
+}
+
+.modal-wrapper[data-modal="true"]{
+  
+  /* opacity: 0; */
+
+}
+
+@keyframes slideUp {
+  0%{
+    transform: translateY(400px);
+  }
+  100% {
+    transform: translateY(1px);
+  }
+}
+
+
+@keyframes slideDown {
+  100% {
+    transform: translateY(1000px);
+  }
+}

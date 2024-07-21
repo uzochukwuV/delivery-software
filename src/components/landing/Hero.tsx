@@ -3,7 +3,7 @@ import { Card, CardSection } from "@mantine/core";
 import TrackOrder from "../misc/TrackOrder";
 function Hero() {
   return (
-    <div className=" pt-14">
+    <div className=" pt-14 md:pt-20">
       <div className=" min-h-[600px] lg:m-6  relative">
         <div className=" hero-bg w-full bg-cover absolute top-0 left-0 right-0 bottom-0 "></div>
         <div className=" h-full bg-gradient-to-r from-black via-transparent to-transparent px-6 pt-20 pb-6">
