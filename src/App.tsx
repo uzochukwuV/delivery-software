@@ -1,22 +1,15 @@
 
-import { Suspense, useLayoutEffect } from 'react';
+import { Suspense } from 'react';
 import './App.css'
 import Home from './pages/landing/Home';
+
+
 
 
 
 function App() {
 
   
-  // console.log(new Date(Date.now()).getSeconds())
- useLayoutEffect(() => {
-  //  console.log(new Date(Date.now()).getSeconds())
- 
-   return () => {
-     
-   };
- }, [])
-
   return (
     <>
       <div className="relative">

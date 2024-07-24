@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import menu from "../../assets/menu.png";
 import { useDisclosure } from "@mantine/hooks";
 import { Button } from "@mantine/core";
+import { SITE_NAME } from "../../constants/names";
 
 function Navbar() {
   const [opened, { open, close }] = useDisclosure(false);
@@ -15,8 +16,8 @@ function Navbar() {
       <div className=" h-[68px] md:h-[100px]  header-wrapper z-30 ">
       <div className="flex h-full justify-between items-center px-6">
         <div className="logo">
-          <h2 className=" text-white text-3xl m-0 font-mono font-extrabold leading-3 text-justify">
-            LIVERY
+          <h2 className=" text-white font-logo text-3xl m-0 font-extrabold leading-3 text-justify">
+            {SITE_NAME}
           </h2>
         </div>
         <NavModal />

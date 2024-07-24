@@ -36,10 +36,10 @@ function Hero() {
               <Card w={"100%"} shadow="sm" maw={500} className="  h-[420px] mx-auto lg:mr-0 rounded-sm mt-4  shadow-lg bg-white">
                 <CardSection className="p-6">
                   <div className="border-b flex gap-8">
-                    <div className="font-semibold border-b-rose-500 border-b-[3px] text-xl text-slate-800">
+                    <div className="font-semibold border-b-rose-500 border-b-[3px] md:text-xl text-slate-800">
                       Track order
                     </div>
-                    <div className="font-semibold   text-xl text-slate-800">
+                    <div className="font-semibold   md:text-xl text-slate-500">
                       Ship order
                     </div>
                   </div>

@@ -8,7 +8,7 @@ function Solution() {
       <div className=" solution-wrapper max-w-[1200px] mx-auto">
         <div className=" ">
           <h2 className=" text-xl lg:text-2xl text-slate-200 font-medium">
-            Trexpress's suite of solutions for
+            <span className=" font-logo">Express Delta</span>'s suite of solutions for
           </h2>
 
           <div className=" w-16 border-b-4 border-b-rose-500 mt-1"></div>

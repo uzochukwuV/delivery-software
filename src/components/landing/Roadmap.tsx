@@ -1,4 +1,5 @@
 
+import { SITE_NAME } from "../../constants/names";
 import Road1 from "../assets/road1";
 
 function Roadmap() {
@@ -8,7 +9,7 @@ function Roadmap() {
         <h2 className=" text-xl text-slate-600 font-medium">
           Flexibility, Reliability and Scale
         </h2>
-        <p className=" font-bold text-xl">The Answer is Delhivery</p>
+        <p className=" font-bold text-xl">The Answer is {SITE_NAME}</p>
         <div className=" w-16 border-b-4 border-b-rose-500 mt-2"></div>
       </div>
       <div className="">

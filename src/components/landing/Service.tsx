@@ -1,4 +1,5 @@
 import { Button } from "@mantine/core";
+import { SITE_NAME } from "../../constants/names";
 
 
 function Service() {
@@ -31,7 +32,7 @@ function Service() {
             commercial purposes in US
           </h2>
           <p className=" text-xs md:text-sm text-center text-slate-300">
-            Sign up now to start shipping with Delhivery
+            Sign up now to start shipping with <span className=" font-logo">{SITE_NAME}</span>
           </p>
           <div className=" flex justify-between md:justify-center md:gap-6 space-x-6">
             <Button
@@ -68,7 +69,7 @@ export default Service;
 
 function ServiceCard() {
   return (
-    <div className="service-card group bg-white p-2 h-[440px]  rounded-lg shadow-sm">
+    <div className="service-card group bg-white p-2 h-[440px] hover:shadow-lg  rounded-lg shadow-sm">
       <div className="rounded-md h-3/5 lg:h-2/5 bg-serviceone">
         <div className="h-full flex items-end p-4 bg-gradient-to-b from-transparent via-transparent to-black">
           <h3 className=" text-white font-semibold text-2xl">
@@ -78,7 +79,7 @@ function ServiceCard() {
       </div>
       <div className="h-2/5 py-3 space-y-4 lg:h-3/5 lg:flex lg:py-6 lg:flex-col lg:justify-between ">
         <div className="px-3 text-slate-500">
-          Send shipments across India for parcels across categories including
+          Send shipments across US and Canada for parcels across categories including
           heavy goods. Get value added services like RTO reduction tools,
           door-step inspection and tracking
         </div>
