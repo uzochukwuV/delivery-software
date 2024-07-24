@@ -40,6 +40,5 @@ export class Track {
 
 
 
-    constructor(name:string, email: string, phone:string) {
-    }
+    
 }
