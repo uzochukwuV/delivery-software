@@ -6,6 +6,7 @@ import Navbar from "../../components/landing/Navbar";
 import Roadmap from "../../components/landing/Roadmap";
 import Service from "../../components/landing/Service";
 import Solution from "../../components/landing/Solution";
+import Tracker from "../../components/track/Tracker";
 
 
 
@@ -23,6 +24,7 @@ function Home() {
         <Solution />
         <Service />
         <Footer />
+        <Tracker />
     </div>
   )
 }

@@ -69,15 +69,15 @@ export default Service;
 
 function ServiceCard() {
   return (
-    <div className="service-card group bg-white p-2 h-[440px] hover:shadow-lg  rounded-lg shadow-sm">
-      <div className="rounded-md h-3/5 lg:h-2/5 bg-serviceone">
-        <div className="h-full flex items-end p-4 bg-gradient-to-b from-transparent via-transparent to-black">
+    <div className="service-card group bg-white p-2 sm:h-[440px] hover:shadow-lg  rounded-lg shadow-sm">
+      <div className="rounded-md h-3/5 lg:h-2/5 bg-serviceone ">
+        <div className="h-full min-h-40 bg-cover flex items-end p-4 bg-gradient-to-b from-transparent via-transparent to-black">
           <h3 className=" text-white font-semibold text-2xl">
             Express Parcel Services
           </h3>
         </div>
       </div>
-      <div className="h-2/5 py-3 space-y-4 lg:h-3/5 lg:flex lg:py-6 lg:flex-col lg:justify-between ">
+      <div className="h-2/5  py-3 space-y-4 lg:h-3/5 lg:flex lg:py-6 lg:flex-col lg:justify-between ">
         <div className="px-3 text-slate-500">
           Send shipments across US and Canada for parcels across categories including
           heavy goods. Get value added services like RTO reduction tools,

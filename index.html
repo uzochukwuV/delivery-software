@@ -5,9 +5,31 @@
     <link rel="icon" type="image/png" href="/logo.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Express Delta Logistics | Your one way ticket in delivery</title>
+    <style>
+      #loading{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 50px;
+      }
+    </style>
   </head>
   <body>
+    <div id="loading">
+      <img src="/Iphone-spinner-2.gif" alt="">
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", (e)=> {
+        document.getElementById("loading").style.display = "none";
+      })
+    </script>
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
+
   </body>
 </html>
