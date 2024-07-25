@@ -1,17 +1,27 @@
 import { Button, Divider,  TextInput } from "@mantine/core";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { getProduct } from "../../db/actions";
 
 
 function TrackOrder() {
   const [active, useActive] = useState(1);
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
+  const [ref, useref] = useState("");
+  const [orderId, setorderId] = useState("")
+  
 
   var dataInput;
   if(active == 1){
     dataInput = <TextInput
+    onChange={(e)=> useref(e.target.value)}
+    value={ref}
+    maxLength={30}
     width={"100%"}
     className=" border"
     variant="outlined"
-    placeholder="Enter mobile number"
+    placeholder="Enter Reference ID"
     size="lg"
   />;
   } else if(active == 2){
@@ -30,6 +40,8 @@ function TrackOrder() {
       width={"100%"}
       className=" border"
       variant="outlined"
+      onChange={(e)=> setorderId(e.target.value)}
+      value={orderId}
       placeholder="Enter Order Id"
       size="lg"
     />;
@@ -61,7 +73,7 @@ function TrackOrder() {
       <div>
         <div className="border rounded-lg flex">
           <div onClick={()=>changeActive(1)} data-active={active==1}  className="mobile border-r  rounded-l-lg flex-1  text-slate-400 md:font-medium py-2 text-center md:text-lg">
-            Mobile
+            Ref
           </div>
           <div onClick={()=>changeActive(2)} data-active={active==2} className={ "awb border-r  flex-1  text-slate-400 md:font-medium py-2 text-center md:text-lg "}>
             AWB
@@ -76,11 +88,30 @@ function TrackOrder() {
       </div>
       <div className="inputmode">
         {dataInput}
+        {
+          error.length > 1 ? <p className=" text-red-500">{error}</p>: ""
+        }
       </div>
       <div>
-        <Button fullWidth variant="filled" size="lg" color="black">
+        
+        <Button  fullWidth variant="filled" size="lg" color="black" onClick={async()=>{
+          //yiDhsgk5oYF7QaMaqIeu
+          //NAxwMfkDGJappSHB9pSq
+          
+          var data = await getProduct(ref);
+          console.log(data.id);
+          
+          if(data.id){
+            navigate(`track/${data.id}`)
+          }else{
+            setError("No tracking code or product found")
+          }
+          
+        }}>
           Track now
         </Button>
+        
+        
       </div>
       <Divider color="#d2d2d2" />
       <div>

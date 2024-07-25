@@ -1,7 +1,9 @@
 
-import { Suspense } from 'react';
+
 import './App.css'
-import Home from './pages/landing/Home';
+import Footer from './components/landing/Footer'
+import Navbar from './components/landing/Navbar'
+import { Outlet } from "react-router-dom";
 
 
 
@@ -13,9 +15,12 @@ function App() {
   return (
     <>
       <div className="relative">
-        <Suspense fallback={<div className=' text-6xl text-blue-800'>Loading ....</div>}>
-          <Home />
-        </Suspense>
+      <div className=" flex flex-col gap-3">
+      <Navbar />
+      <Outlet />
+      <Footer />
+      </div>
+       
       </div>
     </>
   )

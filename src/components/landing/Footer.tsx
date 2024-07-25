@@ -2,7 +2,7 @@
 
 function Footer() {
   return (
-    <div className=" max-w-[1400px] md:py-16 mx-auto">
+    <div className=" max-w-[1400px] md:py-16 mx-auto sm:px-10 md:px-16">
       <div className=" h-[150px] px-6 md:px-0 border-b flex flex-col justify-center gap-4">
         <h2>Logo</h2>
        <div>

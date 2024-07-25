@@ -17,7 +17,7 @@ function Navbar() {
       <div className="flex h-full justify-between items-center px-6">
         <div className="logo">
           <h2 className=" text-white font-logo text-3xl m-0 font-extrabold leading-3 text-justify">
-            {SITE_NAME}
+            <Link to={'/'} className=" text-white"> <span className=" text-white">{SITE_NAME}</span> </Link>
           </h2>
         </div>
         <NavModal />
