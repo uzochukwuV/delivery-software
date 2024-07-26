@@ -32,13 +32,13 @@ const router = createBrowserRouter([
         loader: TrackerLoader,
       },
       {
-        path: "/main/admin/",
+        path: "main/admin",
         element: <Admin />,
         loader: AdminLoader,
         
       },
       {
-        path: "/admin/product/:productId/",
+        path: "admin/product/:productId",
         element: <CreateProductForm />,
         loader: AdminFormLoader,
         action: AdminFormAction,
