@@ -7,6 +7,8 @@ import '@mantine/core/styles.css';
 import {  createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './pages/landing/Home.tsx'
 import Tracker, {loader as TrackerLoader} from './components/track/Tracker.tsx'
+import Admin, {loader as AdminLoader} from './pages/admin/admin.tsx'
+import CreateProductForm, {loader as AdminFormLoader, action as AdminFormAction} from './pages/admin/components/createProductForm.tsx'
 
 
 const theme = createTheme({
@@ -33,9 +35,17 @@ const router = createBrowserRouter([
 
   },
   {
-    path: "/about",
-    element: <>About</>
-  }
+    path: "/main/admin/",
+    element: <Admin />,
+    loader: AdminLoader,
+    
+  },
+  {
+    path: "/admin/product/:productId/",
+    element: <CreateProductForm />,
+    loader: AdminFormLoader,
+    action: AdminFormAction,
+  },
 ]);
 
 

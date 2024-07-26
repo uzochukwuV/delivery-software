@@ -1,6 +1,6 @@
 import { ProductInterface } from "../../constants/names";
 import { format } from "../../constants/utils";
-import { createProductToTrack } from "../../db/actions";
+
 
 
 
@@ -21,14 +21,14 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <h3 className=" text-3xl font-semibold">#{format(data.ref!)}</h3>
           </div>
           <div className="status">
-            <div className="border py-1 px-3 text-sm font-medium rounded-full" onClick={async()=> createProductToTrack()} >
+            <div className="border py-1 px-3 text-sm font-medium rounded-full" >
               In Transit
             </div>
           </div>
         </div>
         <div className="tracker py-6">
           <div className=" flex justify-center items-center">
-            <div className="w-4 h-4 rounded-full bg-indigo-500 bg-indigo-400"></div>
+            <div className="w-4 h-4 rounded-full  bg-indigo-500"></div>
             <div className="flex-1 h-1 rounded-full bg-indigo-500 -ms-1"></div>
             <div className="w-4 h-4 z-10 -ms-1 rounded-full bg-indigo-500"></div>
             <div className="flex-1 h-1 rounded-full bg-indigo-100 -ms-1"></div>
@@ -123,13 +123,13 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">
-                  You package is about to be picked by the carrier
+                  You package ihas been picked by the carrier
                 </p>
                 <p>New York, USA</p>
               </div>
               <div>
-                <p>Today</p>
-                <p>5:0pm</p>
+                <p>{ data.picked_time }</p>
+                <p>11.00am</p>
               </div>
             </div>
 
@@ -139,8 +139,8 @@ function ItemRoute({data}:{data:ProductInterface}) {
                 <p>Douglas, Texas</p>
               </div>
               <div>
-                <p>Today</p>
-                <p>5:0pm</p>
+                <p>{data.transit_time}</p>
+                <p>5:00pm</p>
               </div>
             </div>
 
@@ -150,8 +150,8 @@ function ItemRoute({data}:{data:ProductInterface}) {
                 <p>California, USA</p>
               </div>
               <div>
-                <p>Today</p>
-                <p>5:0pm</p>
+                <p>{data.packing_time}</p>
+                <p>11:00am</p>
               </div>
             </div>
 
@@ -161,8 +161,8 @@ function ItemRoute({data}:{data:ProductInterface}) {
                 <p>Now</p>
               </div>
               <div>
-                <p>Today</p>
-                <p>5:00pm</p>
+                <p>{data.pickup_time}</p>
+                <p>12:00pm</p>
               </div>
             </div>
           </div>

@@ -76,10 +76,10 @@
 
 }
 
-.modal-wrapper[data-modal="true"]{
-  
-  /* opacity: 0; */
 
+
+.checkbox:checked + .check-icon {
+  display: flex;
 }
 
 @keyframes slideUp {
