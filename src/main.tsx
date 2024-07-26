@@ -31,21 +31,22 @@ const router = createBrowserRouter([
         element: <Tracker />,
         loader: TrackerLoader,
       },
+      {
+        path: "/main/admin/",
+        element: <Admin />,
+        loader: AdminLoader,
+        
+      },
+      {
+        path: "/admin/product/:productId/",
+        element: <CreateProductForm />,
+        loader: AdminFormLoader,
+        action: AdminFormAction,
+      },
     ],
 
   },
-  {
-    path: "/main/admin/",
-    element: <Admin />,
-    loader: AdminLoader,
-    
-  },
-  {
-    path: "/admin/product/:productId/",
-    element: <CreateProductForm />,
-    loader: AdminFormLoader,
-    action: AdminFormAction,
-  },
+  
 ]);
 
 
