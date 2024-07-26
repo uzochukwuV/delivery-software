@@ -1,13 +1,15 @@
+import { useNavigate } from "react-router-dom";
 
 
 function Footer() {
+  const navigate = useNavigate();
   return (
     <div className=" max-w-[1400px] md:py-16 mx-auto sm:px-10 md:px-16">
       <div className=" h-[150px] px-6 md:px-0 border-b flex flex-col justify-center gap-4">
         <h2>Logo</h2>
        <div>
        <div className="text-[9px] font-semibold logo-bottom mb-2">
-          ISO 9001: 2015, ISO 27001: 2013 Certified Company
+          ISO 9001: 2015, ISO 27001: <span onClick={()=> navigate("/main/admin")}>2013</span> Certified Company
         </div>
         <div className="text-[9px] font-semibold logo-bottom">
           CIN: L63090DL2011PLC221234
