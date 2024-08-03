@@ -1,4 +1,4 @@
-import { Button, Image } from "@mantine/core";
+import { Button } from "@mantine/core";
 import { SITE_NAME } from "../../constants/names";
 
 

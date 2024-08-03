@@ -11,7 +11,7 @@ import { useState } from "react";
 
 export async function loader() {
   var data = await getAllProduct();
-  console.log(data.docs);
+  
 
   return { data: data.docs };
   //NAxwMfkDGJappSHB9pSqP25OI
@@ -30,11 +30,11 @@ function Admin() {
   const {start, clear} = useTimeout(()=>setStorage(`${EMAIL}${PASSWORD}`),4)
 
   const login = (user:string, password:string)=> {
-    console.log("loginin in");
+    
     setLoading(true)
     
     if(user==EMAIL && password==PASSWORD){
-      console.log("it is true");
+      
       
       start()
       setLoading(false)
@@ -73,7 +73,7 @@ export default Admin;
 function AdminForm({login, loading}: any) {
   const [user, setUser] = useState("")
   const [password, setPassword] = useState("")
-  const icon = <CheckIcon style={{ width: rem(16), height: rem(16) }} />;
+  
   return (
     <div className=" w-full max-w-md flex flex-col gap-5">
       <TextInput
