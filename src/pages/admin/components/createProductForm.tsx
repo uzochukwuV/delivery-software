@@ -76,10 +76,10 @@ function CreateProductForm() {
   return (
     <>
     
-<div className="min-h-screen bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
-  <div className="relative py-3 sm:max-w-xl sm:mx-auto md:max-w-3xl">
+<div className="min-h-screen mt-12 bg-gray-100 py-6 flex flex-col justify-center sm:py-12">
+  <div className="relative py-3 sm:max-w-xl sm:mx-auto md:max-w-4xl">
     <div className="relative px-4 py-10 bg-white mx-8 md:mx-0 shadow rounded-3xl sm:p-10">
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="flex items-center space-x-5">
           <div className="h-14 w-14 bg-yellow-200 rounded-full flex flex-shrink-0 justify-center items-center text-yellow-500 text-2xl font-mono">i</div>
           <div className="block pl-2 font-semibold text-xl self-start text-gray-700">
