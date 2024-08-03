@@ -104,7 +104,7 @@ function Service() {
 export default Service;
 
 function ServiceCard({title, subtitle, image}:any) {
-  var f = title
+  
   return (
     <div className="service-card group relative bg-white p-2 sm:h-[440px] hover:shadow-lg  rounded-lg shadow-sm">
       <div className="rounded-md h-3/5 lg:h-2/5 relative  ">

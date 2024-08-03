@@ -4,8 +4,8 @@ import { getAllProduct } from "../../db/actions";
 import ListView from "./components/listview";
 import { useLocalStorage, useTimeout } from "@mantine/hooks";
 
-import { Button, CheckIcon, Divider,  Loader, PasswordInput, Space, Text } from "@mantine/core";
-import { TextInput, rem } from '@mantine/core';
+import { Button,  Divider,  Loader, PasswordInput, Space, Text } from "@mantine/core";
+import { TextInput } from '@mantine/core';
 import { useState } from "react";
 
 
