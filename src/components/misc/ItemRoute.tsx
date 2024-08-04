@@ -200,7 +200,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">Ready for Pickup</p>
-                <p>Now</p>
+                <p>{data.reciever_location}</p>
               </div>
               <div>
                 <p>{data.pickup_time}</p>
