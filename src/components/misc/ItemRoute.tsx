@@ -109,23 +109,74 @@ function ItemRoute({data}:{data:ProductInterface}) {
       <div className=" flex-1 sm:px-6">
         <div className="title text-lg font-bold  py-4">Live Tracking</div>
         <div className="flex h-[450px] py-6 gap-6">
-          <div className=" flex flex-col justify-center items-center h-full">
-            <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
-            <div className="flex-1 border-2 border-dashed rounded-full  -mt-2"></div>
-            <div className="w-4 h-4 z-10 -mt-2 rounded-full "></div>
-            <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
-            <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
-            <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
-            <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
-            <div className="h-[72px]"></div>
-          </div>
+          {
+            data.deliver_status == "packing" ? (<div className=" flex flex-col justify-center items-center h-full">
+              <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full  border-indigo-100  -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100 "></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
+              <div className="h-[72px]"></div>
+            </div>):"" 
+          }
+          {
+            data.deliver_status == "processing"? (<div className=" flex flex-col justify-center items-center h-full">
+              <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-500  -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500 "></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
+              <div className="h-[72px]"></div>
+            </div>):""
+          }
+
+          {
+            data.deliver_status == "transit"? (<div className=" flex flex-col justify-center items-center h-full">
+              <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-500 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full bg-indigo-500  -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500 "></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
+              <div className="h-[72px]"></div>
+            </div>): ""
+          }
+          {
+            data.deliver_status == "ready"? (<div className=" flex flex-col justify-center items-center h-full">
+              <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-500  -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500 "></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-500 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500"></div>
+              <div className="flex-1 border-2 border-dashed rounded-full border-indigo-500 -mt-2"></div>
+              <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500"></div>
+              <div className="h-[72px]"></div>
+            </div>): ""
+          }
           <div className=" flex flex-col flex-1 justify-center  h-full">
+
+          <div className="flex-1 flex gap-2 justify-between">
+              <div>
+                <p className=" font-semibold text-lg">Packing</p>
+                <p>{data.reciever_location}</p>
+              </div>
+              <div>
+                <p>{data.packing_time}</p>
+                <p>11:00am</p>
+              </div>
+            </div>
+
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">
                   You package is been processed for dispatch..
                 </p>
-                <p>{data.sender_location}</p>
+                <p>{data.reciever_location}</p>
               </div>
               <div>
                 <p>{ data.picked_time }</p>
@@ -144,16 +195,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
               </div>
             </div>
 
-            <div className="flex-1 flex gap-2 justify-between">
-              <div>
-                <p className=" font-semibold text-lg">Packing</p>
-                <p>{data.reciever_location}</p>
-              </div>
-              <div>
-                <p>{data.packing_time}</p>
-                <p>11:00am</p>
-              </div>
-            </div>
+            
 
             <div className="flex-1 flex gap-2 justify-between">
               <div>
