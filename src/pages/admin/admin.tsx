@@ -70,6 +70,7 @@ function Admin() {
         <Divider />
         <Space h={16} />
         <AdminForm login={login} loading={loading} setlogged={setlogged} logged={logged} />
+        <div onClick={clear}></div>
     </div>
   </div>
 }
