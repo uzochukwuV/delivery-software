@@ -163,7 +163,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
           <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">Packing</p>
-                <p>{data.reciever_location}</p>
+                <p>{data.sender_location}</p>
               </div>
               <div>
                 <p>{data.packing_time}</p>
@@ -176,7 +176,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
                 <p className=" font-semibold text-lg">
                   You package is been processed for dispatch..
                 </p>
-                <p>{data.reciever_location}</p>
+                <p>{data.sender_location}</p>
               </div>
               <div>
                 <p>{ data.picked_time }</p>
@@ -187,7 +187,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">In Transit</p>
-                <p>{data.reciever_location}</p>
+                <p>Your package is moving</p>
               </div>
               <div>
                 <p>{data.transit_time}</p>
