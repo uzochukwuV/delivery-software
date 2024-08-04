@@ -132,7 +132,7 @@ function CreateProductForm() {
               </div>
             </div>
             <div className="flex flex-col">
-              <label className="leading-loose">Delivery Status <span className=" text-xs text-blue-700 font-bold">options:packed, processing, transit, ready</span></label>
+              <label className="leading-loose">Delivery Status <span className=" text-xs text-blue-700 font-bold">options:packing, processing, transit, ready</span></label>
               <input required value={(data as ProductInterface).deliver_status} name="deliver_status" onChange={handleChange} type="text" className="px-4 py-2 border focus:ring-gray-500 focus:border-gray-900 w-full sm:text-sm border-gray-300 rounded-md focus:outline-none text-gray-600" placeholder="packed, processing, transit, ready"/>
             </div>
           </div>

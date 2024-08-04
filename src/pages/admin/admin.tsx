@@ -60,7 +60,7 @@ function Admin() {
     );
 
   return <div className="pt-24">
-    <div className="h-full flex justify-center items-center flex flex-col gap-5">
+    <div className="h-full  justify-center items-center flex flex-col gap-5">
     <Space h={24} />
         <Text size="xl" fw={700} c={"grape"}>Login to Admin</Text>
         <Divider />
