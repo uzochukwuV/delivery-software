@@ -111,8 +111,8 @@ function ItemRoute({data}:{data:ProductInterface}) {
         <div className="flex h-[450px] py-6 gap-6">
           <div className=" flex flex-col justify-center items-center h-full">
             <div className="w-4 h-4 rounded-full bg-indigo-500"></div>
-            <div className="flex-1 border-2 border-dashed rounded-full border-indigo-500 -mt-2"></div>
-            <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-500"></div>
+            <div className="flex-1 border-2 border-dashed rounded-full  -mt-2"></div>
+            <div className="w-4 h-4 z-10 -mt-2 rounded-full "></div>
             <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
             <div className="w-4 h-4 z-10 -mt-2 rounded-full bg-indigo-100"></div>
             <div className="flex-1 border-2 border-dashed rounded-full border-indigo-100 -mt-2"></div>
@@ -123,9 +123,9 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">
-                  You package ihas been picked by the carrier
+                  You package is been processed for dispatch..
                 </p>
-                <p>New York, USA</p>
+                <p>{data.sender_location}</p>
               </div>
               <div>
                 <p>{ data.picked_time }</p>
@@ -136,7 +136,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">In Transit</p>
-                <p>Douglas, Texas</p>
+                <p>{data.reciever_location}</p>
               </div>
               <div>
                 <p>{data.transit_time}</p>
@@ -147,7 +147,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
             <div className="flex-1 flex gap-2 justify-between">
               <div>
                 <p className=" font-semibold text-lg">Packing</p>
-                <p>California, USA</p>
+                <p>{data.reciever_location}</p>
               </div>
               <div>
                 <p>{data.packing_time}</p>
