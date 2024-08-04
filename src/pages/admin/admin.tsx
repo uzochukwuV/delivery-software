@@ -2,9 +2,9 @@ import { useLoaderData } from "react-router-dom";
 import { getAllProduct } from "../../db/actions";
 
 import ListView from "./components/listview";
-import { useLocalStorage, useTimeout } from "@mantine/hooks";
+import { useLocalStorage, usePageLeave, useTimeout } from "@mantine/hooks";
 
-import { Button,  Divider,  Loader, PasswordInput, Space, Text } from "@mantine/core";
+import { Button,  Checkbox,  Divider,  Loader, PasswordInput, Space, Text } from "@mantine/core";
 import { TextInput } from '@mantine/core';
 import { useState } from "react";
 
@@ -27,21 +27,30 @@ function Admin() {
     defaultValue: "false",
   });
   const [loading, setLoading] = useState(false)
-  const {start, clear} = useTimeout(()=>setStorage(`${EMAIL}${PASSWORD}`),4)
+  const {start, clear} = useTimeout(()=>{setStorage(`${EMAIL}${PASSWORD}`); setLoading(false)},4000)
+  const [logged, setlogged] = useState(false)
+  
 
   const login = (user:string, password:string)=> {
+    console.log(logged);
     
     setLoading(true)
-    
     if(user==EMAIL && password==PASSWORD){
       
-      
       start()
+     
+    }else{
       setLoading(false)
     }
-    setLoading(false)
-    clear()
+    
+   
   }
+
+  usePageLeave(() => {
+    if(!logged){
+      setStorage("false")
+    }
+  });
 
   
 
@@ -60,7 +69,7 @@ function Admin() {
         <Text size="xl" fw={700} c={"grape"}>Login to Admin</Text>
         <Divider />
         <Space h={16} />
-        <AdminForm login={login} loading={loading} />
+        <AdminForm login={login} loading={loading} setlogged={setlogged} logged={logged} />
     </div>
   </div>
 }
@@ -70,9 +79,13 @@ export default Admin;
 
 
 
-function AdminForm({login, loading}: any) {
+function AdminForm({login, loading, setlogged, logged}: any) {
   const [user, setUser] = useState("")
   const [password, setPassword] = useState("")
+  
+
+  console.log(logged);
+  
   
   return (
     <div className=" w-full max-w-md flex flex-col gap-5">
@@ -94,7 +107,8 @@ function AdminForm({login, loading}: any) {
         placeholder="Password"
         onChange={(event) => setPassword(event.currentTarget.value)}
       />
-      <Button size="md" onClick={()=>login(user, password)}>Login {loading? <Loader h={24}></Loader>:"" } </Button>
+      <Checkbox size="md" value={logged}  onChange={() => setlogged((prev:boolean)=> !prev)} /> <Text>Keep me logged in</Text>
+      <Button size="md" onClick={()=>login(user, password)}> {loading? <Loader h={24} color="white" />:"Login" } </Button>
     </div>
   );
 }
