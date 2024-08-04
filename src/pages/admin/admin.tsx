@@ -2,7 +2,7 @@ import { useLoaderData } from "react-router-dom";
 import { getAllProduct } from "../../db/actions";
 
 import ListView from "./components/listview";
-import { useLocalStorage, usePageLeave, useTimeout } from "@mantine/hooks";
+import { useLocalStorage, useTimeout } from "@mantine/hooks";
 
 import { Button,  Checkbox,  Divider,  Loader, PasswordInput, Space, Text } from "@mantine/core";
 import { TextInput } from '@mantine/core';
@@ -46,11 +46,7 @@ function Admin() {
    
   }
 
-  usePageLeave(() => {
-    if(!logged){
-      setStorage("false")
-    }
-  });
+ 
 
   
 
