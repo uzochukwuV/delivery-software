@@ -22,7 +22,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
           </div>
           <div className="status">
             <div className="border py-1 px-3 text-sm font-medium rounded-full" >
-              In Transit
+              {data.deliver_status.toLocaleUpperCase()}
             </div>
           </div>
         </div>
