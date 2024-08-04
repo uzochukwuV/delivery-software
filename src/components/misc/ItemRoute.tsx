@@ -167,7 +167,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
               </div>
               <div>
                 <p>{data.packing_time}</p>
-                <p>11:00am</p>
+                <p>08:00am</p>
               </div>
             </div>
 
@@ -191,7 +191,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
               </div>
               <div>
                 <p>{data.transit_time}</p>
-                <p>5:00pm</p>
+                <p>05:00pm</p>
               </div>
             </div>
 
@@ -204,7 +204,7 @@ function ItemRoute({data}:{data:ProductInterface}) {
               </div>
               <div>
                 <p>{data.pickup_time}</p>
-                <p>12:00pm</p>
+                <p>04:00pm</p>
               </div>
             </div>
           </div>
